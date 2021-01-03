@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activity.DeepArtActivity">
+
+    <Button
+        android:id="@+id/btnGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:text="이미지 업로드" />
+
+    <ImageView
+        android:id="@+id/drawView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/btnGallery"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:padding="15dp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btnGallery" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnGallery"
+        android:layout_alignBottom="@+id/btnGallery"
+        android:layout_toEndOf="@+id/progressBar"
+        android:padding="5dp"
+        android:text="Status hint" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/drawView"
+        android:scrollbars="vertical" />
+
+    <ImageButton
+        android:id="@+id/save_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:maxWidth="40dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/save"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:padding="7dp"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        />
+
+    <ImageButton
+        android:id="@+id/rotate_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:maxWidth="32dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/rotate"
+        android:layout_alignTop="@id/save_button"
+        android:layout_toLeftOf="@id/save_button"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        />
+
+</RelativeLayout>

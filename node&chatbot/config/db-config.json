@@ -1,0 +1,7 @@
+{
+    "host": "dbinstance.ckmobofhy2er.ap-northeast-2.rds.amazonaws.com",
+    "user": "sumin",
+    "database": "test",
+    "password":"72242077",
+    "port": 3306
+  }

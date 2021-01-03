@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/background"
+        android:title="background"
+        android:icon="@drawable/background"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_delete"
+        android:title="delete"
+        android:icon="@drawable/trash"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_capture"
+        android:title="capture"
+        android:icon="@drawable/camera"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_reload"
+        android:title="reload"
+        android:icon="@drawable/reload"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_save"
+        android:title="save"
+        android:icon="@drawable/save"
+        app:showAsAction="always" />
+
+
+
+
+</menu>

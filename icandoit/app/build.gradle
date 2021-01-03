@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.icandoit"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    aaptOptions {
+        noCompress "tflite"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        mlModelBinding true
+        viewBinding true
+    }
+
+    configurations {
+        implementation.exclude module:'gson'
+    }
+
+//    kotlinOptions {
+//        jvmTarget = "1.8"
+//    }
+}
+repositories{
+    jcenter()
+    google()
+    maven{url 'https://jitpack.io'}
+    maven{url "https://maven.google.com"}
+    maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+
+}
+dependencies {
+    implementation 'com.munon:turboimageview:1.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation "com.kakao.sdk:v2-user:2.0.5" // 카카오 로그인
+    implementation 'com.kakao.sdk:usermgmt:1.27.0'
+    implementation 'com.kakao.sdk:usermgmt:1.16.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation "com.prolificinteractive:material-calendarview:1.4.3"
+    implementation 'com.github.stfalcon:chatkit:0.3.3'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.github.ksoichiro:android-observablescrollview:1.5.2'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "com.squareup.picasso:picasso:2.5.2"
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.github.timigod:android-chat-ui:v0.1.4'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "commons-logging:commons-logging-api:1.1"
+    implementation(fileTree(dir: 'libs', include: ['*.jar']))
+    implementation(fileTree(dir: 'libs', include: ['*.aar']))
+    implementation 'com.applandeo:material-calendar-view:1.7.0'
+}
